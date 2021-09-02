@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>FilterIPAddressQ2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+    <servlet>
+    <servlet-name>IPAddressController</servlet-name>
+    <servlet-class> com.demo.controller.IPAddressController</servlet-class>
+  	<init-param>
+  		<param-name>invalidIpAddress</param-name>
+  		<param-value>127.0.0.2</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IpAddressValidator</servlet-name>
+    <url-pattern>/IpAddressValidator</url-pattern>
+  </servlet-mapping>
+</web-app>
